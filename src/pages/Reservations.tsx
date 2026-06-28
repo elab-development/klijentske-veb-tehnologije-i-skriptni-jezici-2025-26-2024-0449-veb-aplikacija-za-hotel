@@ -8,9 +8,10 @@ function Reservations() {
   if (!reservationContext) {
     return <h2>Greška.</h2>;
   }
-
-  const { reservations } =
-    reservationContext;
+  const {
+    reservations,
+    removeReservation,
+  } = reservationContext;
 
   return (
     <div>
@@ -43,6 +44,7 @@ function Reservations() {
           </p>
 
           <hr />
+          <button onClick={() => removeReservation(reservation.id)}>Otkaži rezervaciju</button>
         </div>
       ))}
     </div>
