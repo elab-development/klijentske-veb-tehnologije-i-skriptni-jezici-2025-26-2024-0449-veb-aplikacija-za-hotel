@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Rooms from "./pages/Rooms";
 import Reservations from "./pages/Reservations";
 import Contact from "./pages/Contact";
+import RoomDetails from "./pages/RoomDetails";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/rooms" element={<Rooms />} />
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/rooms/:id" element={<RoomDetails />} />
       </Routes>
     </>
   );
