@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { ReservationContext } from "../context/ReservationContext";
 import { useParams } from "react-router-dom";
 import { rooms } from "../data/rooms";
+import "../styles/RoomDetails.css";
 
 function RoomDetails() {
   const { id } = useParams();
@@ -34,20 +35,57 @@ function RoomDetails() {
   };
 
   return (
-    <div>
-      <h2>{room.name}</h2>
-      <p>Tip: {room.type}</p>
-      <p>Cena: {room.price} €</p>
-      <p>
-        {room.available
-          ? "Dostupna"
-          : "Nije dostupna"}
-      </p>
-      <button onClick={reserveRoom}>
-         Rezerviši sobu
-      </button>
+
+    <div className="details-container">
+    
+        <div className="details-image">
+    
+            <img
+                src={room.image}
+                alt={room.name}
+            />
+    
+        </div>
+    
+        <div className="details-content">
+    
+            <h2>{room.name}</h2>
+    
+            <p className="details-price">
+                {room.price} € / noć
+            </p>
+    
+            <p className="details-info">
+                <strong>Tip sobe:</strong> {room.type}
+            </p>
+    
+            <p className="details-info">
+                <strong>Status:</strong>{" "}
+                {room.available
+                    ? "Dostupna"
+                    : "Nije dostupna"}
+            </p>
+    
+            <p className="details-description">
+                Ova moderno uređena hotelska soba pruža
+                udoban smeštaj sa besplatnim Wi-Fi internetom,
+                klima uređajem, televizorom, mini barom,
+                sefom i sopstvenim kupatilom. Idealna je za
+                poslovna putovanja i odmor.
+            </p>
+    
+            <button
+                className="reserve-button"
+                onClick={reserveRoom}
+            >
+                Rezerviši odmah
+            </button>
+    
+        </div>
+    
     </div>
-  );
+    
+    );
 }
 
 export default RoomDetails;

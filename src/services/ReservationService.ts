@@ -1,20 +1,45 @@
 import type { Reservation } from "../models/Reservation";
 
 export class ReservationService {
-  private reservations: Reservation[] = [];
 
-  getReservations() {
-    return this.reservations;
+  getReservations(): Reservation[] {
+
+    const data = localStorage.getItem("reservations");
+
+    return data ? JSON.parse(data) : [];
+
   }
 
   addReservation(reservation: Reservation) {
-    this.reservations.push(reservation);
+
+    const reservations = this.getReservations();
+
+    reservations.push(reservation);
+
+    localStorage.setItem(
+      "reservations",
+      JSON.stringify(reservations)
+    );
+
   }
 
   removeReservation(id: number) {
-    this.reservations =
-      this.reservations.filter(
-        (r) => r.id !== id
-      );
+
+    const reservations = this.getReservations().filter(
+      (r) => r.id !== id
+    );
+
+    localStorage.setItem(
+      "reservations",
+      JSON.stringify(reservations)
+    );
+
   }
+
+  clearReservations() {
+
+    localStorage.removeItem("reservations");
+
+  }
+
 }
