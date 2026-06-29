@@ -19,30 +19,43 @@ function Rooms() {
 
   return (
     <div>
-      <h2>Sobe</h2>
-
-      <input
-        type="text"
-        placeholder="Pretraga sobe..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-
-      <select
-        value={type}
-        onChange={(e) => setType(e.target.value)}
-      >
-        <option value="Sve">Sve</option>
-        <option value="Single">Single</option>
-        <option value="Double">Double</option>
-        <option value="Suite">Suite</option>
-      </select>
-
-      <div className="rooms-container">
-      {filteredRooms.map((room) => (
-        <RoomCard key={room.id} room={room} />
-      ))}
+  
+      <h2 className="rooms-title">
+        Naše sobe
+      </h2>
+  
+      <div className="filters">
+  
+        <input
+          type="text"
+          placeholder="Pretraži sobu..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+  
+        <select
+          value={type}
+          onChange={(e) => setType(e.target.value)}
+        >
+          <option value="Sve">Sve</option>
+          <option value="Single">Single</option>
+          <option value="Double">Double</option>
+          <option value="Suite">Suite</option>
+        </select>
+  
       </div>
+  
+      <div className="rooms-container">
+  
+        {filteredRooms.map((room) => (
+          <RoomCard
+            key={room.id}
+            room={room}
+          />
+        ))}
+  
+      </div>
+  
     </div>
   );
 }

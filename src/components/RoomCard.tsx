@@ -9,19 +9,46 @@ interface Props {
 function RoomCard({ room }: Props) {
   return (
     <div className="room-card">
-      <img src={room.image} alt={room.name}/>
-      <h3>{room.name}</h3>
-      <p>Tip: {room.type}</p>
-      <p>Cena: {room.price} €</p>
-      <p>
-        {room.available
-          ? "Dostupna"
-          : "Nije dostupna"}
-      </p>
-      <Link to={`/rooms/${room.id}`}>
-        Pogledaj detalje
-      </Link>
-    </div>
+
+  <img
+    src={room.image}
+    alt={room.name}
+  />
+
+  <div className="room-info">
+
+    <h3>{room.name}</h3>
+
+    <p className="room-type">
+      {room.type}
+    </p>
+
+    <p className="room-price">
+      {room.price} € / noć
+    </p>
+
+    <p
+      className={
+        room.available
+          ? "available"
+          : "not-available"
+      }
+    >
+      {room.available
+        ? "Dostupna"
+        : "Nije dostupna"}
+    </p>
+
+    <Link
+      className="details-btn"
+      to={`/rooms/${room.id}`}
+    >
+      Pogledaj detalje
+    </Link>
+
+  </div>
+
+</div>
   );
 }
 
