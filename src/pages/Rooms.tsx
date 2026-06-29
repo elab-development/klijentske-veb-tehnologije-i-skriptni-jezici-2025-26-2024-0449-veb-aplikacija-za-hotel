@@ -10,7 +10,7 @@ function Rooms() {
 
   const [currentPage, setCurrentPage] = useState(1);
 
-  const roomsPerPage = 4;
+  const roomsPerPage = 3;
 
   const filteredRooms = rooms
     .filter((room) => {

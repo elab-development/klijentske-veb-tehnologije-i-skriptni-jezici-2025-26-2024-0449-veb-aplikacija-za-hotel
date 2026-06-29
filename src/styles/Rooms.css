@@ -27,3 +27,46 @@
     width:240px;
     font-size:16px;
 }
+.rooms-container{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.pagination{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    margin:50px 0;
+}
+
+.pagination button{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:10px;
+    background:#1B365D;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.pagination button:hover{
+    background:#284d82;
+    transform:translateY(-2px);
+}
+@media (max-width: 992px){
+    .rooms-container{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .rooms-container{
+        grid-template-columns:1fr;
+    }
+}
