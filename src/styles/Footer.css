@@ -1,0 +1,23 @@
+.footer{
+    background:#1B365D;
+    color:white;
+    display:flex;
+    justify-content:space-around;
+    padding:50px 80px;
+    margin-top:80px;
+    flex-wrap:wrap;
+}
+
+.footer-section{
+    max-width:280px;
+}
+
+.footer h3{
+    color:#C9A227;
+    margin-bottom:15px;
+}
+
+.footer p{
+    margin:8px 0;
+    line-height:1.6;
+}

@@ -5,6 +5,7 @@ import Rooms from "./pages/Rooms";
 import Reservations from "./pages/Reservations";
 import Contact from "./pages/Contact";
 import RoomDetails from "./pages/RoomDetails";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/rooms/:id" element={<RoomDetails />} />
       </Routes>
+      <Footer />
+
     </>
   );
 }
