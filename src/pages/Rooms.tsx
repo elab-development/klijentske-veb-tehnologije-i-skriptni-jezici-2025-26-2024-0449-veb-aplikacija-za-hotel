@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { rooms } from "../data/rooms";
+import "../styles/Rooms.css";
 import RoomCard from "../components/RoomCard";
 
 function Rooms() {
@@ -37,9 +38,11 @@ function Rooms() {
         <option value="Suite">Suite</option>
       </select>
 
+      <div className="rooms-container">
       {filteredRooms.map((room) => (
         <RoomCard key={room.id} room={room} />
       ))}
+      </div>
     </div>
   );
 }

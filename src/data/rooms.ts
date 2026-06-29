@@ -1,3 +1,6 @@
+import soba1 from "../assets/rooms/soba1.jpeg";
+import soba2 from "../assets/rooms/soba2.jpeg";
+import soba3 from "../assets/rooms/soba3.jpeg";
 import type { Room } from "../models/Room";
 export const rooms: Room[] = [
   {
@@ -5,7 +8,7 @@ export const rooms: Room[] = [
     name: "Luxury Suite",
     type: "Suite",
     price: 120,
-    image: "",
+    image: soba1,
     available: true,
   },
   {
@@ -13,7 +16,7 @@ export const rooms: Room[] = [
     name: "Double Room",
     type: "Double",
     price: 80,
-    image: "",
+    image: soba2,
     available: true,
   },
   {
@@ -21,7 +24,7 @@ export const rooms: Room[] = [
     name: "Single Room",
     type: "Single",
     price: 50,
-    image: "",
+    image: soba3,
     available: false,
   },
 ];
