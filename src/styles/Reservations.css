@@ -1,0 +1,45 @@
+.reservations-page{
+    max-width:900px;
+    margin:50px auto;
+}
+
+.reservations-title{
+    text-align:center;
+    color:#1B365D;
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+.reservation-card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.reservation-card p{
+    margin:10px 0;
+    font-size:17px;
+}
+
+.cancel-btn{
+    margin-top:20px;
+    background:#b22222;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.cancel-btn:hover{
+    background:#8b0000;
+}
+
+.empty{
+    text-align:center;
+    font-size:20px;
+    color:#666;
+}
