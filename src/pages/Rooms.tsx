@@ -6,15 +6,29 @@ import RoomCard from "../components/RoomCard";
 function Rooms() {
   const [search, setSearch] = useState("");
   const [type, setType] = useState("Sve");
+  const [sort, setSort] = useState("default");
 
-  const filteredRooms = rooms.filter((room) => {
-    const matchesSearch =
-      room.name.toLowerCase().includes(search.toLowerCase());
+  const filteredRooms = rooms
+  .filter((room) => {
+    const matchesSearch = room.name
+      .toLowerCase()
+      .includes(search.toLowerCase());
 
     const matchesType =
       type === "Sve" || room.type === type;
 
     return matchesSearch && matchesType;
+  })
+  .sort((a, b) => {
+    if (sort === "priceAsc") {
+      return a.price - b.price;
+    }
+
+    if (sort === "priceDesc") {
+      return b.price - a.price;
+    }
+
+    return 0;
   });
 
   return (
@@ -42,6 +56,22 @@ function Rooms() {
           <option value="Double">Double</option>
           <option value="Suite">Suite</option>
         </select>
+        <select
+  value={sort}
+  onChange={(e) => setSort(e.target.value)}
+>
+      <option value="default">
+        Sortiranje
+      </option>
+
+      <option value="priceAsc">
+        Cena rastuće
+      </option>
+
+       <option value="priceDesc">
+          Cena opadajuće
+        </option>
+      </select>
   
       </div>
   
