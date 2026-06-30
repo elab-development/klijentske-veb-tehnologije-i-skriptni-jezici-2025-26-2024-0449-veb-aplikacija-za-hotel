@@ -1,7 +1,11 @@
 import { useState } from "react";
 import RoomCard from "../components/RoomCard";
-import { rooms } from "../data/rooms";
 import "../styles/Rooms.css";
+import { RoomService } from "../services/RoomService";
+
+const roomService = new RoomService();
+
+const rooms = roomService.getAllRooms();
 
 function Rooms() {
   const [search, setSearch] = useState("");
