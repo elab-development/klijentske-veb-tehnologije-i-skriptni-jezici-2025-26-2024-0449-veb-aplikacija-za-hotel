@@ -12,13 +12,18 @@ nav {
 }
 
 .logo{
-  .logo{
-    font-size:32px;
-    font-weight:700;
-    color:#1B365D;
-    letter-spacing:2px;
-    cursor:pointer;
-  }
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:30px;
+  font-weight:700;
+  color:#1B365D;
+  letter-spacing:1px;
+}
+.logo img{
+  width:100px;
+  height:55px;
+  object-fit:contain;
 }
 
 .links{
