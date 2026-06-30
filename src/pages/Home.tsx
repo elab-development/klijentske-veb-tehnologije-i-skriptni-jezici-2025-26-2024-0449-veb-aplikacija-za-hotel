@@ -18,7 +18,7 @@ function Home() {
                 <div className="hero-content">
 
                     <h1>
-                        Aurora Palace
+                        INDIGO BELGRADE
                     </h1>
 
                     <p>
@@ -35,7 +35,7 @@ function Home() {
 
             </section>
             <section className="features">
-                <h2>Zašto izabrati Aurora Palace?</h2>
+                <h2>Zašto izabrati Indigo Belgrade?</h2>
                 
                 <div className="features-grid">
                     <div className="feature-card">
@@ -52,6 +52,21 @@ function Home() {
                                  <h3>🏊 Wellness & Spa</h3>
                                  <p>Bazen, sauna i spa centar dostupni su svim gostima.</p>
                     </div>
+                </div>
+            </section>
+            <section className="about-hotel">
+                 <div className="about-content">
+                        <h2>O hotelu Indigo Belgrade</h2>
+                        <p>  Aurora Palace je moderan hotel namenjen gostima koji'
+                            žele udoban smeštaj, vrhunsku uslugu i prijatan ambijent.
+      Naš cilj je da svaki gost uživa u boravku, bilo da dolazi
+      poslovno ili turistički.
+                        </p>
+                        <p>
+      Gostima su na raspolaganju luksuzno uređene sobe,
+      restoran sa domaćom i internacionalnom kuhinjom,
+      besplatan Wi-Fi, parking i recepcija dostupna 24 časa.
+      </p>
                 </div>
             </section>
         </>
