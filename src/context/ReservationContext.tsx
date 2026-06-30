@@ -1,7 +1,4 @@
-import {
-    createContext,
-    useState,
-  } from "react";
+  import {createContext, useState,} from "react";
   import type { Reservation } from "../models/Reservation";
   import type { ReactNode } from "react";
   

@@ -1,34 +1,15 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
 
 function Navbar() {
     return (
         <nav>
-
-            <div className="logo">
-                Aurora Palace
-            </div>
-
             <div className="links">
-
-                <Link to="/">
-                    Početna
-                </Link>
-
-                <Link to="/rooms">
-                    Sobe
-                </Link>
-
-                <Link to="/reservations">
-                    Rezervacije
-                </Link>
-
-                <Link to="/contact">
-                    Kontakt
-                </Link>
-
+                <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>Početna</NavLink>
+                <NavLink to="/rooms" className={({ isActive }) => isActive ? "active-link" : "" }>  Sobe</NavLink>
+                <NavLink to="/reservations" className={({ isActive }) => isActive ? "active-link" : ""}> Rezervacije</NavLink>
+                <NavLink to="/contact" className={({ isActive }) =>   isActive ? "active-link" : "" }> Kontakt</NavLink>
             </div>
-
         </nav>
     );
 }
