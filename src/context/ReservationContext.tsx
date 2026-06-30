@@ -13,6 +13,7 @@ import {
     removeReservation: (
       id: number
     ) => void;
+    clearReservations: () => void;
   }
   
   export const ReservationContext =
@@ -46,6 +47,9 @@ import {
         prev.filter((r) => r.id !== id)
       );
     };
+    const clearReservations = () => {
+      setReservations([]);
+    };
   
     return (
       <ReservationContext.Provider
@@ -53,6 +57,7 @@ import {
           reservations,
           addReservation,
           removeReservation,
+          clearReservations,
         }}
       >
         {children}

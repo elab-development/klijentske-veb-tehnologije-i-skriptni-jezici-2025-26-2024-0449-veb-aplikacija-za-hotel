@@ -10,7 +10,7 @@ function Reservations() {
     return <h2>Greška.</h2>;
   }
 
-  const { reservations, removeReservation } = reservationContext;
+  const { reservations, removeReservation , clearReservations } = reservationContext;
 
   return (
     <div className="reservations-page">
@@ -66,6 +66,10 @@ function Reservations() {
           </div>
         );
       })}
+      {reservations.length > 0 && (
+        <div style={{textAlign: "center",marginTop: "30px",}}>
+          <button className="cancel-btn" onClick={clearReservations}>Obriši sve rezervacije</button>
+        </div>)}
 
     </div>
   );
