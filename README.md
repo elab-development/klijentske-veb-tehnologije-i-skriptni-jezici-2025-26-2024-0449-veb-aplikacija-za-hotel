@@ -1,75 +1,88 @@
-# React + TypeScript + Vite
+# Indigo Belgrade
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Opis projekta
 
-Currently, two official plugins are available:
+Indigo Belgrade je klijentska veb aplikacija razvijena korišćenjem React i TypeScript tehnologija. Aplikacija omogućava pregled hotelskih soba, pretragu, filtriranje i sortiranje soba, pregled detalja sobe, kao i rezervaciju i otkazivanje rezervacija.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Korišćene tehnologije
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- React Router DOM
+- CSS
+- Git
+- GitHub
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Funkcionalnosti
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Pregled svih hotelskih soba
+- Prikaz detalja svake sobe
+- Pretraga soba po nazivu
+- Filtriranje soba po tipu
+- Sortiranje soba po ceni
+- Paginacija prikaza soba
+- Rezervacija sobe
+- Otkazivanje rezervacije
+- Kontakt stranica
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Pokretanje projekta
 
+1. Klonirati repozitorijum
+
+```bash
+git clone <link-do-repozitorijuma>
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Ući u folder projekta
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+cd sp20240449-hotel
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3. Instalirati zavisnosti
+
+```bash
+npm install
+```
+
+4. Pokrenuti aplikaciju
+
+```bash
+npm run dev
+```
+
+---
+
+## Struktura projekta
 
 ```
+src/
+│
+├── assets/
+├── components/
+├── context/
+├── data/
+├── models/
+├── pages/
+├── services/
+├── styles/
+└── App.tsx
+```
+
+---
+
+## Autor
+
+Stefan Petrovic 
+Index: 2024/0449
+
+Seminarski rad iz predmeta Klijentske veb tehnologije i skriptni jezici.
+
+Tema: Hotel "Indigo Belgrade".
