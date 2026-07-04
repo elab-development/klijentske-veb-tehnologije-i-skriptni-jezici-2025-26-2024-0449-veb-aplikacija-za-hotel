@@ -34,31 +34,31 @@ Indigo Belgrade je klijentska veb aplikacija razvijena korišćenjem React i Typ
 
 ## Pokretanje projekta
 
-1. Klonirati repozitorijum
+## Pokretanje projekta
+
+1. Klonirati repozitorijum:
 
 ```bash
-git clone <link-do-repozitorijuma>
+git clone https://github.com/elab-development/klijentske-veb-tehnologije-i-skriptni-jezici-2025-26-2024-0449-veb-aplikacija-za-hotel.git
 ```
 
-2. Ući u folder projekta
+2. Ući u folder projekta:
 
 ```bash
-cd sp20240449-hotel
+cd klijentske-veb-tehnologije-i-skriptni-jezici-2025-26-2024-0449-veb-aplikacija-za-hotel
 ```
 
-3. Instalirati zavisnosti
+3. Instalirati zavisnosti:
 
 ```bash
 npm install
 ```
 
-4. Pokrenuti aplikaciju
+4. Pokrenuti aplikaciju:
 
 ```bash
 npm run dev
 ```
-
----
 
 ## Struktura projekta
 
